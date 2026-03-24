@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>มหาเฮงการช่าง — Bold & Warm</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&family=Kanit:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#00C48C;
+  --green-d:#009E72;
+  --green-l:#33D4A4;
+  --green-bg:rgba(0,196,140,0.08);
+  --navy:#0F1F45;
+  --navy-d:#0A1630;
+  --navy-light:#1B3070;
+  --white:#FFFFFF;
+  --off:#F4F8F6;
+  --ink:#0F1F45;
+  --ink-50:rgba(15,31,69,0.5);
+  --ink-15:rgba(15,31,69,0.12);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Prompt',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--green)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:99;height:72px;background:var(--white);border-bottom:2px solid var(--green);display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-icon{width:38px;height:38px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{stroke:white}
+.nav-logo-text{font-family:'Kanit',sans-serif;font-size:17px;font-weight:800;color:var(--ink);line-height:1}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--ink-50);letter-spacing:1px}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-link{padding:8px 18px;border-radius:100px;color:var(--ink-50);font-size:13px;font-weight:600;text-decoration:none;transition:all .2s}
+.nav-link:hover{background:var(--green-bg);color:var(--green)}
+.nav-cta{padding:10px 26px;background:var(--navy);color:var(--white);border-radius:100px;font-size:13px;font-weight:700;text-decoration:none;transition:all .22s;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--navy-d);transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding-top:72px;min-height:100vh;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;background:var(--white)}
+.hero-left{padding:80px 56px 80px 56px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--green-bg);border:1.5px solid rgba(0,196,140,0.35);border-radius:100px;padding:8px 18px;width:fit-content;margin-bottom:32px}
+.hero-badge-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.3)}}
+.hero-badge-text{font-size:11px;font-weight:700;color:var(--green-d);letter-spacing:1.5px;text-transform:uppercase}
+.hero-h1{font-family:'Kanit',sans-serif;font-size:clamp(3.5rem,6vw,6.5rem);font-weight:900;line-height:0.95;letter-spacing:-2px;color:var(--navy);margin-bottom:24px}
+.hero-h1 .accent{color:var(--green)}
+.hero-h1 .stroke{-webkit-text-stroke:3px var(--navy);color:transparent}
+.hero-desc{font-size:15px;color:var(--ink-50);line-height:1.9;max-width:440px;margin-bottom:44px;font-weight:400}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.btn-orange{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--green);color:var(--white);border-radius:100px;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:all .22s;box-shadow:0 8px 24px rgba(0,196,140,0.3)}
+.btn-orange:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,196,140,0.4)}
+.btn-outline-warm{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border:2px solid rgba(15,31,69,0.2);border-radius:100px;color:var(--navy);font-size:14px;font-weight:600;text-decoration:none;transition:all .22s}
+.btn-outline-warm:hover{border-color:var(--navy);color:var(--navy);background:rgba(15,31,69,0.04)}
+.hero-stats{display:flex;gap:0}
+.hs-item{padding:20px 32px;background:var(--white);border-radius:16px;text-align:center;margin-right:12px;box-shadow:0 4px 16px rgba(15,31,69,0.08);border:1.5px solid var(--ink-15)}
+.hs-num{font-family:'Kanit',sans-serif;font-size:1.9rem;font-weight:900;color:var(--navy);line-height:1}
+.hs-label{font-size:11px;color:var(--ink-50);margin-top:3px;font-weight:500}
+
+.hero-right{position:relative;overflow:hidden;background:var(--off)}
+.hero-right-img{width:100%;height:100%;object-fit:cover;min-height:600px;display:block}
+.hero-right::before{content:'';position:absolute;top:0;left:0;bottom:0;width:80px;background:linear-gradient(to right,var(--white),transparent);z-index:1}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(0,196,140,0.12))}
+.hero-float-badge{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);z-index:3;background:var(--white);border-radius:16px;padding:16px 24px;box-shadow:0 8px 32px rgba(15,31,69,0.15);border-left:4px solid var(--green);white-space:nowrap}
+.hfb-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.hfb-title{font-size:14px;font-weight:700;color:var(--navy)}
+.hfb-meta{font-size:11px;color:var(--ink-50);margin-top:2px}
+
+/* SERVICES TABS */
+.sec{padding:96px 56px}
+.sec-cream{background:var(--off)}
+.sec-white{background:var(--white)}
+.sec-inner{max-width:1200px;margin:0 auto}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--green-bg);color:var(--green-d);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:18px}
+.sec-h2{font-family:'Kanit',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.5px;color:var(--navy);margin-bottom:12px}
+.sec-h2 em{font-style:normal;color:var(--green)}
+.sec-sub{font-size:14px;color:var(--ink-50);line-height:1.8;max-width:500px;margin-bottom:52px}
+
+.svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-card{background:var(--white);border-radius:20px;padding:36px 32px;border:2px solid var(--ink-15);transition:all .28s;cursor:pointer;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--green);transform:scaleX(0);transition:transform .28s;transform-origin:left}
+.svc-card:hover{border-color:rgba(0,196,140,0.35);box-shadow:0 16px 48px rgba(0,196,140,0.1);transform:translateY(-4px)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-icon-wrap{width:56px;height:56px;background:var(--green-bg);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .28s}
+.svc-card:hover .svc-icon-wrap{background:var(--green)}
+.svc-card:hover .svc-icon-wrap svg *{stroke:white!important}
+.svc-num{font-family:'Kanit',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--green-d);margin-bottom:10px}
+.svc-title{font-family:'Kanit',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:10px}
+.svc-desc{font-size:13px;color:var(--ink-50);line-height:1.8;margin-bottom:20px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.svc-tag{padding:4px 12px;background:var(--green-bg);border-radius:100px;font-size:11px;color:var(--green-d);font-weight:600}
+.svc-more{font-size:13px;color:var(--navy);font-weight:700;display:flex;align-items:center;gap:6px}
+
+/* PORTFOLIO — colorful masonry style */
+.port-grid-warm{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px;margin-top:52px}
+.pw-card{border-radius:20px;overflow:hidden;position:relative;cursor:pointer}
+.pw-card.wide{grid-column:span 2}
+.pw-img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease;display:block}
+.pw-card:hover .pw-img{transform:scale(1.06)}
+.pw-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,0.85) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+.pw-tag{display:inline-block;padding:4px 12px;background:var(--green);border-radius:100px;font-size:10px;font-weight:700;color:white;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}
+.pw-title{font-family:'Kanit',sans-serif;font-size:17px;font-weight:800;color:var(--white);margin-bottom:3px}
+.pw-meta{font-size:12px;color:rgba(255,255,255,0.7)}
+
+/* WHY — card grid */
+.why-grid-warm{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.ww-card{background:var(--off);border-radius:20px;padding:36px 28px;border:2px solid transparent;transition:all .25s;cursor:default}
+.ww-card:hover{border-color:rgba(0,196,140,0.35);background:var(--white);box-shadow:0 12px 40px rgba(0,196,140,0.08)}
+.ww-num{font-family:'Kanit',sans-serif;font-size:3rem;font-weight:900;color:rgba(15,31,69,0.1);line-height:1;margin-bottom:16px;transition:color .25s}
+.ww-card:hover .ww-num{color:rgba(0,196,140,0.25)}
+.ww-icon{width:44px;height:44px;background:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.ww-title{font-family:'Kanit',sans-serif;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px}
+.ww-desc{font-size:13px;color:var(--ink-50);line-height:1.7}
+
+/* CTA — full bleed orange */
+.cta-warm{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:100px 56px;position:relative;overflow:hidden}
+.cta-warm::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:rgba(255,255,255,0.06);border-radius:50%}
+.cta-warm::after{content:'';position:absolute;bottom:-80px;left:-80px;width:320px;height:320px;background:rgba(0,0,0,0.06);border-radius:50%}
+.cta-warm-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center}
+.cta-warm-h2{font-family:'Kanit',sans-serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:16px}
+.cta-warm-sub{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.8;max-width:480px}
+.cta-warm-btns{display:flex;flex-direction:column;gap:12px;min-width:200px}
+.btn-white-warm{padding:16px 36px;background:var(--white);color:var(--navy);border-radius:100px;font-size:14px;font-weight:700;text-decoration:none;text-align:center;transition:all .22s;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+.btn-white-warm:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.2)}
+.btn-outline-white{padding:15px 36px;border:2px solid rgba(255,255,255,0.5);color:var(--white);border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;text-align:center;transition:all .22s}
+.btn-outline-white:hover{border-color:white;background:rgba(255,255,255,0.1)}
+
+/* CTA STATS ROW */
+.stats-row{background:var(--navy);padding:40px 56px;display:flex;justify-content:center;gap:0}
+.stats-row-inner{max-width:1200px;width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1)}
+.sr-item{background:var(--navy);padding:32px 36px;text-align:center}
+.sr-num{font-family:'Kanit',sans-serif;font-size:2.5rem;font-weight:900;color:var(--green);line-height:1}
+.sr-label{font-size:12px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:500;letter-spacing:0.5px}
+
+/* FOOTER */
+footer{background:var(--navy-d);padding:48px 56px;display:flex;align-items:center;justify-content:space-between}
+.foot-logo-wrap{display:flex;align-items:center;gap:12px}
+.foot-logo-icon{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.foot-logo-text{font-family:'Kanit',sans-serif;font-size:15px;font-weight:800;color:var(--white)}
+.foot-copy{font-size:12px;color:rgba(255,255,255,0.4)}
+.foot-links{display:flex;gap:28px}
+.foot-links a{font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--green)}
+
+/* MARQUEE */
+.marquee-warm{background:var(--navy);height:46px;display:flex;align-items:center;overflow:hidden}
+.mw-track{display:flex;animation:mw 28s linear infinite;white-space:nowrap}
+@keyframes mw{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mw-item{display:inline-flex;align-items:center;gap:18px;padding:0 20px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.mw-dot{width:4px;height:4px;background:var(--green);border-radius:50%}
+
+@media(max-width:960px){
+  #nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:48px 24px;min-height:auto}
+  .hero-right{height:350px}
+  .hero-right::before{display:none}
+  .sec{padding:64px 24px}
+  .svc-cards{grid-template-columns:1fr}
+  .port-grid-warm{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px}
+  .pw-card.wide{grid-column:span 2}
+  .why-grid-warm{grid-template-columns:1fr 1fr}
+  .cta-warm{padding:64px 24px}
+  .cta-warm-inner{grid-template-columns:1fr;gap:36px}
+  .stats-row{padding:32px 24px}
+  .stats-row-inner{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <img src="LOGO06.png" alt="มหาเฮงการช่าง" style="height:46px">
+  <div class="nav-links">
+    <a href="#" class="nav-link">บริการ</a>
+    <a href="#" class="nav-link">ออกแบบ</a>
+    <a href="#" class="nav-link">ต่อเติม</a>
+    <a href="#" class="nav-link">ผลงาน</a>
+    <a href="#" class="nav-cta">ปรึกษาฟรี</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span class="hero-badge-text">ผู้รับเหมาที่จริงใจ · ประสบการณ์ 10+ ปี</span>
+    </div>
+    <h1 class="hero-h1">
+      <span class="stroke">สร้าง</span><br/>
+      <span class="accent">บ้าน</span><br/>
+      ใน<span class="accent">ฝัน</span>
+    </h1>
+    <p class="hero-desc">ออกแบบ · สร้างใหม่ · ต่อเติม ครบจบที่เดียว<br/>ทีมวิศวกรและช่างประสบการณ์กว่า 10 ปี คุมงานทุกขั้นตอน</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-orange">
+        ดูผลงานทั้งหมด
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2.5"/></svg>
+      </a>
+      <a href="tel:080000000" class="btn-outline-warm">โทรปรึกษาฟรี</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs-item"><div class="hs-num">200+</div><div class="hs-label">โครงการสำเร็จ</div></div>
+      <div class="hs-item"><div class="hs-num">10+</div><div class="hs-label">ปีประสบการณ์</div></div>
+      <div class="hs-item"><div class="hs-num">98%</div><div class="hs-label">ลูกค้าพอใจ</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-right-img" src="659971.jpg" alt="บ้านสวย"/>
+    <div class="hero-float-badge">
+      <div class="hfb-label">โครงการล่าสุด</div>
+      <div class="hfb-title">บ้านเดี่ยว 2 ชั้น Modern Tropical</div>
+      <div class="hfb-meta">นนทบุรี · ส่งมอบแล้ว ✓</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-warm"><div class="mw-track">
+  <span class="mw-item">ออกแบบบ้าน<span class="mw-dot"></span></span>
+  <span class="mw-item">รับสร้างบ้าน<span class="mw-dot"></span></span>
+  <span class="mw-item">ต่อเติมโรงรถ<span class="mw-dot"></span></span>
+  <span class="mw-item">ห้องครัว<span class="mw-dot"></span></span>
+  <span class="mw-item">ห้องสัตว์เลี้ยง<span class="mw-dot"></span></span>
+  <span class="mw-item">ราคาโปร่งใส<span class="mw-dot"></span></span>
+  <span class="mw-item">วิศวกรควบคุม<span class="mw-dot"></span></span>
+  <span class="mw-item">ออกแบบบ้าน<span class="mw-dot"></span></span>
+  <span class="mw-item">รับสร้างบ้าน<span class="mw-dot"></span></span>
+  <span class="mw-item">ต่อเติมโรงรถ<span class="mw-dot"></span></span>
+  <span class="mw-item">ห้องครัว<span class="mw-dot"></span></span>
+  <span class="mw-item">ห้องสัตว์เลี้ยง<span class="mw-dot"></span></span>
+  <span class="mw-item">ราคาโปร่งใส<span class="mw-dot"></span></span>
+  <span class="mw-item">วิศวกรควบคุม<span class="mw-dot"></span></span>
+</div></div>
+
+<section class="sec sec-white">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">บริการของเรา</div>
+    <h2 class="sec-h2">ครบทุกขั้นตอน ตั้งแต่<em>ออกแบบจนส่งมอบ</em></h2>
+    <p class="sec-sub">ทีมงานดูแลคุณตั้งแต่วางผังจนส่งกุญแจ ไม่ต้องวุ่นวายประสานหลายเจ้า</p>
+    <div class="svc-cards">
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#00C48C" stroke-width="1.8"/><path d="M7 8h10M7 12h10M7 16h6" stroke="#00C48C" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-num">01 — ออกแบบ</div>
+        <div class="svc-title">ออกแบบบ้าน</div>
+        <p class="svc-desc">สถาปนิกและวิศวกรออกแบบเฉพาะสำหรับคุณ พร้อม 3D และเอกสารขออนุญาตก่อสร้าง</p>
+        <div class="svc-tags">
+          <span class="svc-tag">2D + 3D</span>
+          <span class="svc-tag">แบบวิศวกร</span>
+          <span class="svc-tag">ขออนุญาต</span>
+        </div>
+        <div class="svc-more">ดูตัวอย่างงาน <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#00C48C" stroke-width="2.5"/></svg></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V21H3V10.5z" stroke="#00C48C" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="#00C48C" stroke-width="1.8"/></svg>
+        </div>
+        <div class="svc-num">02 — สร้างบ้าน</div>
+        <div class="svc-title">รับสร้างบ้าน</div>
+        <p class="svc-desc">ก่อสร้างบ้านทุกสไตล์ วัสดุมาตรฐาน ควบคุมงานโดยวิศวกร ส่งงานตรงเวลา</p>
+        <div class="svc-tags">
+          <span class="svc-tag">บ้านเดี่ยว</span>
+          <span class="svc-tag">ทาวน์เฮาส์</span>
+          <span class="svc-tag">รับประกัน</span>
+        </div>
+        <div class="svc-more">ดูโครงการจริง <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#00C48C" stroke-width="2.5"/></svg></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#00C48C" stroke-width="1.8" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" stroke="#00C48C" stroke-width="1.8"/><line x1="12" y1="18" x2="12" y2="12" stroke="#00C48C" stroke-width="1.8" stroke-linecap="round"/><line x1="9" y1="15" x2="15" y2="15" stroke="#00C48C" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-num">03 — ต่อเติม</div>
+        <div class="svc-title">ต่อเติม & รีโนเวท</div>
+        <p class="svc-desc">ต่อเติมโรงรถ ห้องครัว ห้องน้ำ ห้องสัตว์เลี้ยง หรือรีโนเวทบ้านทั้งหลัง</p>
+        <div class="svc-tags">
+          <span class="svc-tag">โรงรถ</span>
+          <span class="svc-tag">ห้องครัว</span>
+          <span class="svc-tag">Pet Room</span>
+        </div>
+        <div class="svc-more">ดูงานต่อเติม <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#00C48C" stroke-width="2.5"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-cream">
+  <div class="sec-inner">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:0">
+      <div>
+        <div class="sec-eyebrow">ผลงานของเรา</div>
+        <h2 class="sec-h2" style="margin-bottom:0">งานจริง รูปจริง · <em>โครงการที่ผ่านมา</em></h2>
+      </div>
+      <a href="#" class="btn-outline-warm" style="margin-bottom:6px;padding:12px 28px;font-size:13px">ดูทั้งหมด →</a>
+    </div>
+    <div class="port-grid-warm">
+      <div class="pw-card wide">
+        <img class="pw-img" src="659970.jpg" alt=""/>
+        <div class="pw-overlay">
+          <span class="pw-tag">สร้างบ้าน</span>
+          <div class="pw-title">บ้านเดี่ยว 2 ชั้น Modern Tropical</div>
+          <div class="pw-meta">นนทบุรี · 180 ตร.ม. · 3 ห้องนอน</div>
+        </div>
+      </div>
+      <div class="pw-card">
+        <img class="pw-img" src="659971.jpg" alt=""/>
+        <div class="pw-overlay">
+          <span class="pw-tag">ออกแบบ</span>
+          <div class="pw-title">3D Design Tropical</div>
+          <div class="pw-meta">ปทุมธานี</div>
+        </div>
+      </div>
+      <div class="pw-card">
+        <img class="pw-img" src="659970.jpg" alt=""/>
+        <div class="pw-overlay">
+          <span class="pw-tag">ต่อเติม</span>
+          <div class="pw-title">ต่อเติมโรงรถ + หลังคา</div>
+          <div class="pw-meta">ปทุมธานี · 7 วัน</div>
+        </div>
+      </div>
+      <div class="pw-card">
+        <img class="pw-img" src="659971.jpg" alt=""/>
+        <div class="pw-overlay">
+          <span class="pw-tag">สร้างบ้าน</span>
+          <div class="pw-title">บ้านชั้นเดียว</div>
+          <div class="pw-meta">นนทบุรี · 120 ตร.ม.</div>
+        </div>
+      </div>
+      <div class="pw-card">
+        <img class="pw-img" src="659970.jpg" alt=""/>
+        <div class="pw-overlay">
+          <span class="pw-tag">รีโนเวท</span>
+          <div class="pw-title">รีโนเวทห้องน้ำ</div>
+          <div class="pw-meta">กรุงเทพฯ · 5 วัน</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">ทำไมต้องเรา</div>
+    <h2 class="sec-h2">ความแตกต่างที่<em>คุณจะรู้สึกได้</em></h2>
+    <p class="sec-sub">เราไม่ใช่แค่ผู้รับเหมา แต่เราเป็นพาร์ทเนอร์ที่จะอยู่เคียงข้างคุณตลอดโครงการ</p>
+    <div class="why-grid-warm">
+      <div class="ww-card">
+        <div class="ww-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="white" stroke-width="1.8"/></svg></div>
+        <div class="ww-num">01</div>
+        <div class="ww-title">ราคาโปร่งใส</div>
+        <p class="ww-desc">เสนอราคาแบบแจกแจงทุกรายการ ไม่มีค่าใช้จ่ายซ่อนเร้น</p>
+      </div>
+      <div class="ww-card">
+        <div class="ww-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="white" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="ww-num">02</div>
+        <div class="ww-title">ช่าง 10+ ปี</div>
+        <p class="ww-desc">ทีมช่างเฉพาะทาง มีวิศวกรควบคุมงานตลอดโครงการ</p>
+      </div>
+      <div class="ww-card">
+        <div class="ww-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="ww-num">03</div>
+        <div class="ww-title">ตรงเวลาเสมอ</div>
+        <p class="ww-desc">ตารางงานชัดเจน ลูกค้าติดตามได้ทุกอาทิตย์</p>
+      </div>
+      <div class="ww-card">
+        <div class="ww-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ww-num">04</div>
+        <div class="ww-title">ครบทุกประเภท</div>
+        <p class="ww-desc">บ้านหลังใหญ่หรืองานต่อเติมเล็ก ทีมเดียวจบ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-warm">
+  <div class="cta-warm-inner">
+    <div>
+      <h2 class="cta-warm-h2">ปรึกษาฟรี ไม่มีค่าใช้จ่าย<br/>บอกเลยว่าอยากได้บ้านแบบไหน</h2>
+      <p class="cta-warm-sub">ทีมงานจะไปสำรวจหน้างานและเสนอราคาโดยละเอียดภายใน 3 วันทำการ</p>
+    </div>
+    <div class="cta-warm-btns">
+      <a href="https://line.me" target="_blank" class="btn-white-warm">ทักไลน์เลย</a>
+      <a href="tel:080000000" class="btn-outline-white">โทร 08-XXXX-XXXX</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="stats-row-inner">
+    <div class="sr-item"><div class="sr-num">200+</div><div class="sr-label">โครงการสำเร็จ</div></div>
+    <div class="sr-item"><div class="sr-num">10+</div><div class="sr-label">ปีในวงการ</div></div>
+    <div class="sr-item"><div class="sr-num">98%</div><div class="sr-label">ลูกค้าพอใจ</div></div>
+    <div class="sr-item"><div class="sr-num">3 จว.</div><div class="sr-label">พื้นที่บริการ</div></div>
+  </div>
+</div>
+
+<footer>
+  <div style="background:white;border-radius:8px;padding:5px 10px"><img src="LOGO06.png" alt="มหาเฮงการช่าง" style="height:38px;display:block"></div>
+  <div class="foot-links">
+    <a href="#">บริการ</a><a href="#">ผลงาน</a><a href="#">ติดต่อ</a>
+  </div>
+  <div class="foot-copy">© 2025 มหาเฮงการช่าง</div>
+</footer>
+
+</body>
+</html>
