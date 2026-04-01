@@ -48,12 +48,29 @@ html, body {
 
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 
+@font-face {
+  font-family: "Layiji JarakeFadHang";
+  src: url("Layiji-JaRaKeFadHang-1.0/Layiji%20JaRaKeFadHangV1.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-luxury-th {
   font-family: "Pridi", "Kanit", serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.18;
   padding-top: 0.18em;
+  text-wrap: balance;
+}
+.font-layiji {
+  font-family: "Layiji JarakeFadHang", "Pridi", "Kanit", serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.28;
+  padding-top: 0.18em;
+  padding-bottom: 0.14em;
   text-wrap: balance;
 }
 
@@ -314,8 +331,8 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
   </div>
 
   <!-- Overlays -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/75 z-10 pointer-events-none"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/10 to-transparent z-10 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/45 z-10 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/35 via-black/5 to-transparent z-10 pointer-events-none"></div>
 
   <!-- Main content -->
   <div class="absolute inset-0 z-20 flex flex-col justify-center px-8 md:px-16 pt-20">
@@ -324,7 +341,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         <div class="w-10 h-px" style="background:#d4a017;"></div>
         <span class="font-headline font-bold text-xs tracking-[0.3em] uppercase" style="color:#d4a017;">Premium Construction Since 2009</span>
       </div>
-<h1 class="font-luxury-th inline-block mb-6 hero-in text-gold-gradient" 
+<h1 class="font-layiji inline-block mb-6 hero-in text-gold-gradient overflow-visible" 
     style="font-size:clamp(3.2rem, 8vw, 6.5rem); animation-delay:0.1s">
     ผู้รับเหมาที่จริงใจ<br>ตรงไป ตรงมา
 </h1>
@@ -601,8 +618,8 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
     <a class="font-bold flex items-center gap-2 hover:underline" href="#" style="color:#d4a017;">ดูทั้งหมด <span class="material-symbols-outlined">north_east</span></a>
   </div>
   <!-- ออกแบบ -->
-  <div class="mb-14">
-    <div class="flex items-center justify-between mb-6">
+  <div class="mt-20 md:mt-24 pt-8 md:pt-10 border-t mb-14" style="border-color:rgba(212,160,23,0.18);">
+    <div class="flex items-center justify-between mb-7 md:mb-8">
       <div class="flex items-center gap-3">
         <span class="w-8 h-1 rounded-full inline-block" style="background:#d4a017;"></span>
         <h3 class="font-headline text-xl font-bold" style="color:#fabd00;">ออกแบบ</h3>
@@ -613,11 +630,12 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         <button onclick="carouselNext('carousel-a')" class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
       </div>
     </div>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden pb-1">
       <div id="carousel-a" class="flex gap-4 transition-transform duration-500 ease-out">
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_1.jpg" alt="ออกแบบ 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_2.jpg" alt="ออกแบบ 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+                <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_2.jpg" alt="ออกแบบ 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_3.jpg" alt="ออกแบบ 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_1.jpg" alt="ออกแบบ 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_4.jpg" alt="ออกแบบ 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_5.jpg" alt="ออกแบบ 5"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="portpolio/LINE_ALBUM_ใส่ใน บริการของเรา หัวข้อ ออกแบบ_260331_6.jpg" alt="ออกแบบ 6"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
@@ -657,7 +675,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
       </div>
     </div>
     <div class="overflow-hidden">
-      <div id="carousel-n" class="flex gap-4 transition-transform duration-500 ease-out">
+      <div id="carousel-n-old" class="hidden flex gap-4 transition-transform duration-500 ease-out">
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_แบบบ้าน%20N_260324_1.jpg" alt="แบบบ้าน N 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_แบบบ้าน%20N_260324_2.jpg" alt="แบบบ้าน N 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_แบบบ้าน%20N_260324_3.jpg" alt="แบบบ้าน N 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
@@ -674,15 +692,45 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_แบบบ้าน%20N_260324_14.jpg" alt="แบบบ้าน N 14"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_แบบบ้าน%20N_260324_15.jpg" alt="แบบบ้าน N 15"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
       </div>
+      <div id="carousel-n" class="flex gap-4 transition-transform duration-500 ease-out">
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_1.jpg" alt="ก่อสร้าง 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_2.jpg" alt="ก่อสร้าง 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_3.jpg" alt="ก่อสร้าง 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_4.jpg" alt="ก่อสร้าง 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_5.jpg" alt="ก่อสร้าง 5"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_6.jpg" alt="ก่อสร้าง 6"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_7.jpg" alt="ก่อสร้าง 7"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_8.jpg" alt="ก่อสร้าง 8"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_9.jpg" alt="ก่อสร้าง 9"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_10.jpg" alt="ก่อสร้าง 10"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_11.jpg" alt="ก่อสร้าง 11"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_12.jpg" alt="ก่อสร้าง 12"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_13.jpg" alt="ก่อสร้าง 13"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_14.jpg" alt="ก่อสร้าง 14"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_15.jpg" alt="ก่อสร้าง 15"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_16.jpg" alt="ก่อสร้าง 16"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_17.jpg" alt="ก่อสร้าง 17"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_18.jpg" alt="ก่อสร้าง 18"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_19.jpg" alt="ก่อสร้าง 19"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_20.jpg" alt="ก่อสร้าง 20"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_21.jpg" alt="ก่อสร้าง 21"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_22.jpg" alt="ก่อสร้าง 22"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_23.jpg" alt="ก่อสร้าง 23"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_24.jpg" alt="ก่อสร้าง 24"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_25.jpg" alt="ก่อสร้าง 25"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_26.jpg" alt="ก่อสร้าง 26"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_27.jpg" alt="ก่อสร้าง 27"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="build/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ ก่อสร้าง_260402_28.jpg" alt="ก่อสร้าง 28"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+      </div>
     </div>
   </div>
 
   <!-- รีโนเวท -->
-  <div>
+  <div class="mb-14">
     <div class="flex items-center justify-between mb-6">
       <div class="flex items-center gap-3">
         <span class="w-8 h-1 rounded-full inline-block" style="background:#d4a017;"></span>
-        <h3 class="font-headline text-xl font-bold" style="color:#fabd00;">รีโนเวท</h3>
+        <h3 class="font-headline text-xl font-bold" style="color:#fabd00;">รีโนเวท-ต่อเติม</h3>
         <span class="text-sm text-on-surface-variant ml-2">26 รูป</span>
       </div>
       <div class="flex gap-2">
@@ -691,9 +739,8 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
       </div>
     </div>
     <div class="overflow-hidden">
-      <div id="carousel-bi" class="flex gap-4 transition-transform duration-500 ease-out">
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_1.jpg" alt="บิ้วอิน 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_2.jpg" alt="บิ้วอิน 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+      <div id="carousel-bi-old" class="hidden flex gap-4 transition-transform duration-500 ease-out">
+
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_3.jpg" alt="บิ้วอิน 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_4.jpg" alt="บิ้วอิน 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_5.jpg" alt="บิ้วอิน 5"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
@@ -719,13 +766,143 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_25.jpg" alt="บิ้วอิน 25"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="LINE_ALBUM_ออกแบบ%20บิ้วอิน_260324_26.jpg" alt="บิ้วอิน 26"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
       </div>
+      <div id="carousel-bi" class="flex gap-4 transition-transform duration-500 ease-out">
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_1.jpg" alt="รีโนเวท-ต่อเติม 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_2.jpg" alt="รีโนเวท-ต่อเติม 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_3.jpg" alt="รีโนเวท-ต่อเติม 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_4.jpg" alt="รีโนเวท-ต่อเติม 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_5.jpg" alt="รีโนเวท-ต่อเติม 5"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_6.jpg" alt="รีโนเวท-ต่อเติม 6"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_7.jpg" alt="รีโนเวท-ต่อเติม 7"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_8.jpg" alt="รีโนเวท-ต่อเติม 8"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_9.jpg" alt="รีโนเวท-ต่อเติม 9"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_10.jpg" alt="รีโนเวท-ต่อเติม 10"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_11.jpg" alt="รีโนเวท-ต่อเติม 11"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_12.jpg" alt="รีโนเวท-ต่อเติม 12"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_13.jpg" alt="รีโนเวท-ต่อเติม 13"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_14.jpg" alt="รีโนเวท-ต่อเติม 14"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_15.jpg" alt="รีโนเวท-ต่อเติม 15"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_16.jpg" alt="รีโนเวท-ต่อเติม 16"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_17.jpg" alt="รีโนเวท-ต่อเติม 17"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_18.jpg" alt="รีโนเวท-ต่อเติม 18"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_19.jpg" alt="รีโนเวท-ต่อเติม 19"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_20.jpg" alt="รีโนเวท-ต่อเติม 20"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_21.jpg" alt="รีโนเวท-ต่อเติม 21"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_22.jpg" alt="รีโนเวท-ต่อเติม 22"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_23.jpg" alt="รีโนเวท-ต่อเติม 23"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_24.jpg" alt="รีโนเวท-ต่อเติม 24"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_25.jpg" alt="รีโนเวท-ต่อเติม 25"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_26.jpg" alt="รีโนเวท-ต่อเติม 26"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_27.jpg" alt="รีโนเวท-ต่อเติม 27"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_28.jpg" alt="รีโนเวท-ต่อเติม 28"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_29.jpg" alt="รีโนเวท-ต่อเติม 29"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-14">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-1 rounded-full inline-block" style="background:#d4a017;"></span>
+        <h3 class="font-headline text-xl font-bold" style="color:#fabd00;">โรงรถ-ห้องแมว-ครัว-ระเบียง</h3>
+        <span class="text-sm text-on-surface-variant ml-2">4 รูป</span>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="carouselPrev('carousel-pet')" class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+        <button onclick="carouselNext('carousel-pet')" class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div id="carousel-pet" class="flex gap-4 transition-transform duration-500 ease-out">
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="pet/387393.jpg" alt="โรงรถ-ห้องแมว-ครัว-ระเบียง 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="pet/387394.jpg" alt="โรงรถ-ห้องแมว-ครัว-ระเบียง 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="pet/387395.jpg" alt="โรงรถ-ห้องแมว-ครัว-ระเบียง 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="pet/387396.jpg" alt="โรงรถ-ห้องแมว-ครัว-ระเบียง 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+      </div>
     </div>
   </div>
 
 <script>
 (function(){
   const state = {};
+  const buildCarousel = document.getElementById('carousel-n');
+  const buildSection = buildCarousel ? buildCarousel.closest('.mb-14') : null;
+  const buildCount = buildSection ? buildSection.querySelector('.text-sm.text-on-surface-variant.ml-2') : null;
+  const renovateCarousel = document.getElementById('carousel-bi');
+  const renovateSection = renovateCarousel ? renovateCarousel.closest('.mb-14') : null;
+  const renovateCount = renovateSection ? renovateSection.querySelector('.text-sm.text-on-surface-variant.ml-2') : null;
+  const petCarousel = document.getElementById('carousel-pet');
+  const petSection = petCarousel ? petCarousel.closest('.mb-14') : null;
+  const petCount = petSection ? petSection.querySelector('.text-sm.text-on-surface-variant.ml-2') : null;
+  const buildFirstSet = [
+    'build/first set/1.jpg',
+    'build/first set/2.jpg',
+    'build/first set/3.jpg',
+    'build/first set/4.jpg'
+  ];
+  const petExtraSet = [
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_1.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_2.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_3.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_4.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_5.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_6.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_7.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_8.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_9.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_10.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_11.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_12.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_13.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_14.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_15.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_16.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_17.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_18.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_19.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_20.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_21.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_22.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_23.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_24.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_25.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_26.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_27.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_28.jpg',
+    'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_29.jpg'
+  ];
+  if (buildCarousel) {
+    buildFirstSet.forEach(function(src, index) {
+      const card = buildCarousel.children[index];
+      const image = card ? card.querySelector('img') : null;
+      if (image) {
+        image.src = src;
+        image.alt = 'ก่อสร้าง ' + (index + 1);
+      }
+    });
+  }
+  if (petCarousel) {
+    petExtraSet.forEach(function(src, index) {
+      const card = document.createElement('div');
+      card.className = 'min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]';
+      card.innerHTML = '<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="' + src + '" alt="โรงรถ-ห้องแมว-ครัว-ระเบียง ' + (index + 5) + '"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div>';
+      petCarousel.appendChild(card);
+    });
+  }
+  if (petCount) {
+    petCount.textContent = '33 รูป';
+  }
+  if (renovateCount) {
+    renovateCount.textContent = '29 รูป';
+  }
+  if (buildCount) {
+    buildCount.textContent = '28 รูป';
+  }
+
   window.carouselNext = function(id) {
+    if (renovateCount) {
+      renovateCount.textContent = '29 รูป';
+    }
     const el = document.getElementById(id);
     const items = el.children;
     const itemW = items[0].offsetWidth + 16;
@@ -781,7 +958,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         </div>
       </div>
       <div class="mt-10 rounded-2xl overflow-hidden shadow-2xl">
-        <img src="LINE_ALBUM_แบบบ้าน%20N_260324_2.jpg" alt="ทีมงานมหาเฮง การช่าง" class="w-full h-56 object-cover"/>
+        <img src="387292.jpg" alt="ทีมงานมหาเฮง การช่าง" class="w-full h-56 object-cover"/>
       </div>
     </div>
     <div class="lg:w-1/2 relative z-10">
