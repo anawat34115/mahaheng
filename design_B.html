@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>มหาเฮงการช่าง — Minimal Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#00C48C;
+  --green-d:#009E72;
+  --green-bg:rgba(0,196,140,0.08);
+  --navy:#0F1F45;
+  --ink:#0F1F45;
+  --ink-50:rgba(15,31,69,0.5);
+  --ink-20:rgba(15,31,69,0.12);
+  --white:#FFFFFF;
+  --off:#F4F8F6;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Prompt',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--ink-20)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:99;height:68px;background:var(--white);border-bottom:1px solid var(--ink-20);display:flex;align-items:center;justify-content:space-between;padding:0 64px}
+.nav-brand{display:flex;align-items:baseline;gap:6px}
+.nav-brand-th{font-family:'Kanit',sans-serif;font-size:17px;font-weight:700;color:var(--ink);letter-spacing:0.5px}
+.nav-brand-dot{width:5px;height:5px;background:var(--green);border-radius:50%;margin-bottom:3px;align-self:flex-end}
+.nav-links{display:flex;gap:40px;align-items:center}
+.nav-links a{color:var(--ink-50);text-decoration:none;font-size:13px;font-weight:500;transition:color .18s;letter-spacing:0.3px}
+.nav-links a:hover{color:var(--ink)}
+.nav-contact{font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--green);padding-bottom:1px;transition:opacity .18s}
+.nav-contact:hover{color:var(--green);opacity:1}
+
+/* HERO */
+.hero{padding-top:68px;display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.hero-left{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-left::after{content:'';position:absolute;right:0;top:10%;bottom:10%;width:1px;background:var(--ink-20)}
+.hero-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--green-d);font-weight:700;margin-bottom:36px;display:flex;align-items:center;gap:12px}
+.hero-label::before{content:'';width:20px;height:1.5px;background:var(--green-d)}
+.hero-h1{font-family:'Kanit',sans-serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:900;line-height:0.95;letter-spacing:-2px;color:var(--ink);margin-bottom:32px}
+.hero-h1 em{font-style:normal;color:var(--green)}
+.hero-h1 .outline{-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero-desc{font-size:15px;color:var(--ink-50);line-height:1.9;max-width:400px;font-weight:300;margin-bottom:52px}
+.hero-actions{display:flex;align-items:center;gap:32px}
+.btn-fill{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--navy);color:var(--white);font-family:'Prompt',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.5px;text-decoration:none;transition:background .22s}
+.btn-fill:hover{background:var(--green)}
+.btn-text{font-size:13px;color:var(--ink-50);text-decoration:none;font-weight:500;border-bottom:1px solid var(--ink-20);padding-bottom:2px;transition:all .2s}
+.btn-text:hover{color:var(--ink);border-color:var(--ink)}
+.hero-stats{display:flex;gap:48px;padding-top:52px;border-top:1px solid var(--ink-20);margin-top:auto}
+.hs-num{font-family:'Kanit',sans-serif;font-size:2rem;font-weight:900;color:var(--navy);line-height:1}
+.hs-num span{color:var(--green)}
+.hs-label{font-size:11px;color:var(--ink-50);margin-top:4px;font-weight:400}
+
+.hero-right{position:relative;overflow:hidden;background:var(--off)}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;clip-path:polygon(8% 0, 100% 0, 100% 100%, 0% 100%)}
+
+/* TICKER */
+.ticker{height:44px;border-top:1px solid var(--ink-20);border-bottom:1px solid var(--ink-20);display:flex;align-items:center;overflow:hidden}
+.ticker-track{display:flex;animation:tk 28s linear infinite;white-space:nowrap}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-item{display:inline-flex;align-items:center;gap:20px;padding:0 24px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-50);font-weight:500}
+.tk-dot{width:3px;height:3px;background:var(--green);border-radius:50%}
+
+/* SERVICES — horizontal list */
+.sec{padding:100px 64px}
+.sec-off{background:var(--off)}
+.sec-inner{max-width:1200px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;gap:80px;margin-bottom:72px;padding-bottom:40px;border-bottom:1px solid var(--ink-20)}
+.sec-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--green-d);font-weight:600;margin-bottom:14px}
+.sec-h2{font-family:'Kanit',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.5px;color:var(--navy)}
+.sec-h2 em{font-style:normal;color:var(--green)}
+.sec-sub{font-size:14px;color:var(--ink-50);line-height:1.9;max-width:360px;font-weight:300;flex-shrink:0}
+
+.svc-list-items{display:flex;flex-direction:column;gap:0}
+.svc-row-item{display:grid;grid-template-columns:80px 1fr 280px 120px;align-items:center;gap:40px;padding:36px 0;border-bottom:1px solid var(--ink-20);transition:all .22s;cursor:pointer}
+.svc-row-item:first-child{border-top:1px solid var(--ink-20)}
+.svc-row-item:hover .svc-row-title{color:var(--navy)}
+.svc-row-item:hover{background:var(--off)}
+.svc-row-num{font-family:'Kanit',sans-serif;font-size:13px;color:var(--ink-50);font-weight:400;letter-spacing:1px}
+.svc-row-title{font-family:'Kanit',sans-serif;font-size:22px;font-weight:700;transition:color .2s;color:var(--navy)}
+.svc-row-desc{font-size:13px;color:var(--ink-50);line-height:1.7;font-weight:300}
+.svc-row-more{text-align:right;font-size:12px;color:var(--ink-50);letter-spacing:1px;font-weight:500;display:flex;align-items:center;justify-content:flex-end;gap:6px}
+
+/* PORTFOLIO — asymmetric editorial grid */
+.port-editorial{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto;gap:4px;margin-top:60px}
+.pe-card{position:relative;overflow:hidden}
+.pe-card.big{grid-row:span 2}
+.pe-img{background-size:cover;background-position:center;transition:transform .7s ease}
+.pe-card.big .pe-img{height:640px}
+.pe-card:not(.big) .pe-img{height:318px}
+.pe-card:hover .pe-img{transform:scale(1.04)}
+.pe-info{padding:20px 0 0}
+.pe-tag{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green-d);font-weight:600;margin-bottom:6px}
+.pe-title{font-family:'Kanit',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.pe-meta{font-size:12px;color:var(--ink-50)}
+
+/* WHY — single column, divider style */
+.why-list{display:flex;flex-direction:column;margin-top:60px}
+.why-row{display:grid;grid-template-columns:100px 1fr 1fr;gap:40px;padding:48px 0;border-bottom:1px solid var(--ink-20);align-items:start}
+.why-row:first-child{border-top:1px solid var(--ink-20)}
+.why-num{font-family:'Kanit',sans-serif;font-size:11px;color:var(--green-d);letter-spacing:2px;font-weight:600;padding-top:4px}
+.why-title{font-family:'Kanit',sans-serif;font-size:20px;font-weight:700;color:var(--navy)}
+.why-desc{font-size:14px;color:var(--ink-50);line-height:1.8;font-weight:300}
+
+/* CTA */
+.cta-editorial{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink-20);border-bottom:1px solid var(--ink-20)}
+.cta-left{padding:100px 64px;background:var(--navy);color:var(--white)}
+.cta-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--green-l, #33D4A4);font-weight:600;margin-bottom:24px}
+.cta-h2{font-family:'Kanit',sans-serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:20px}
+.cta-h2 em{font-style:normal;color:var(--green)}
+.cta-sub{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.9;font-weight:300;max-width:380px;margin-bottom:44px}
+.btn-green-fill{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--green);color:var(--white);font-family:'Prompt',sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s;margin-right:16px}
+.btn-green-fill:hover{background:var(--green-d)}
+.btn-white-outline{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.7);font-family:'Prompt',sans-serif;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-white-outline:hover{border-color:white;color:white}
+.cta-right{padding:100px 64px;background:var(--off);display:flex;flex-direction:column;justify-content:space-between}
+.cta-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink-20);flex:1;margin-top:36px}
+.cst-item{background:var(--off);padding:36px 28px}
+.cst-num{font-family:'Kanit',sans-serif;font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1}
+.cst-num span{color:var(--green);font-size:2rem}
+.cst-label{font-size:11px;color:var(--ink-50);margin-top:6px;letter-spacing:0.5px}
+
+/* FOOTER */
+footer{padding:40px 64px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--ink-20)}
+.foot-brand-min{font-family:'Kanit',sans-serif;font-size:16px;font-weight:700;color:var(--navy)}
+.foot-copy{font-size:12px;color:var(--ink-50)}
+.foot-links{display:flex;gap:32px}
+.foot-links a{font-size:12px;color:var(--ink-50);text-decoration:none;transition:color .18s}
+.foot-links a:hover{color:var(--ink)}
+
+@media(max-width:960px){
+  #nav{padding:0 24px}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:48px 24px;min-height:90vh}
+  .hero-left::after{display:none}
+  .hero-right{height:400px}
+  .sec{padding:72px 24px}
+  .sec-head{flex-direction:column;gap:24px}
+  .svc-row-item{grid-template-columns:60px 1fr;grid-template-rows:auto auto}
+  .svc-row-desc,.svc-row-more{display:none}
+  .port-editorial{grid-template-columns:1fr 1fr}
+  .pe-card.big{grid-column:span 2;grid-row:span 1}
+  .pe-card.big .pe-img{height:320px}
+  .why-row{grid-template-columns:60px 1fr;grid-template-rows:auto auto}
+  .why-desc{grid-column:2}
+  .cta-editorial{grid-template-columns:1fr}
+  .cta-left,.cta-right{padding:60px 24px}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <img src="LOGO06.png" alt="มหาเฮงการช่าง" style="height:42px">
+  <div class="nav-links">
+    <a href="#">บริการ</a>
+    <a href="#">ออกแบบ</a>
+    <a href="#">ต่อเติม</a>
+    <a href="#">ผลงาน</a>
+    <a href="#" class="nav-contact">ติดต่อเรา</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-label">ผู้รับเหมาที่จริงใจ · ประสบการณ์ 10+ ปี</div>
+    <h1 class="hero-h1">
+      สร้าง<br/>
+      บ้าน<em>ดี</em><br/>
+      <span class="outline">ที่ไว้</span><br/>
+      ใจได้
+    </h1>
+    <p class="hero-desc">ออกแบบ · สร้างใหม่ · ต่อเติม ครบจบที่เดียว<br/>ทีมวิศวกรและช่างประสบการณ์กว่า 10 ปี คุมงานทุกขั้นตอน</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-fill">ดูผลงานทั้งหมด</a>
+      <a href="tel:080000000" class="btn-text">โทรปรึกษาฟรี →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hs-num">200<span>+</span></div><div class="hs-label">โครงการสำเร็จ</div></div>
+      <div><div class="hs-num">10<span>+</span></div><div class="hs-label">ปีประสบการณ์</div></div>
+      <div><div class="hs-num">98<span>%</span></div><div class="hs-label">ลูกค้าพอใจ</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img" src="659970.jpg" alt="บ้านสวย"/>
+  </div>
+</section>
+
+<div class="ticker"><div class="ticker-track">
+  <span class="tk-item">ออกแบบบ้าน<span class="tk-dot"></span></span>
+  <span class="tk-item">รับสร้างบ้าน<span class="tk-dot"></span></span>
+  <span class="tk-item">ต่อเติมโรงรถ<span class="tk-dot"></span></span>
+  <span class="tk-item">ห้องครัว<span class="tk-dot"></span></span>
+  <span class="tk-item">ห้องสัตว์เลี้ยง<span class="tk-dot"></span></span>
+  <span class="tk-item">ราคาโปร่งใส<span class="tk-dot"></span></span>
+  <span class="tk-item">วิศวกรควบคุม<span class="tk-dot"></span></span>
+  <span class="tk-item">ออกแบบบ้าน<span class="tk-dot"></span></span>
+  <span class="tk-item">รับสร้างบ้าน<span class="tk-dot"></span></span>
+  <span class="tk-item">ต่อเติมโรงรถ<span class="tk-dot"></span></span>
+  <span class="tk-item">ห้องครัว<span class="tk-dot"></span></span>
+  <span class="tk-item">ห้องสัตว์เลี้ยง<span class="tk-dot"></span></span>
+  <span class="tk-item">ราคาโปร่งใส<span class="tk-dot"></span></span>
+  <span class="tk-item">วิศวกรควบคุม<span class="tk-dot"></span></span>
+</div></div>
+
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <div>
+        <div class="sec-eyebrow">บริการของเรา</div>
+        <h2 class="sec-h2">ครบทุกขั้นตอน<br/>ตั้งแต่<em>ออกแบบ</em><br/>จนส่งมอบ</h2>
+      </div>
+      <p class="sec-sub">ทีมงานดูแลคุณตั้งแต่วางผังจนส่งกุญแจ ไม่ต้องวุ่นวายประสานหลายเจ้า ผู้เชี่ยวชาญครบทุกด้านอยู่ที่เดียว</p>
+    </div>
+    <div class="svc-list-items">
+      <div class="svc-row-item">
+        <div class="svc-row-num">01</div>
+        <div class="svc-row-title">ออกแบบบ้าน</div>
+        <div class="svc-row-desc">สถาปนิกและวิศวกรออกแบบเฉพาะสำหรับคุณ พร้อม 3D และเอกสารขออนุญาตก่อสร้าง</div>
+        <div class="svc-row-more">ดูตัวอย่าง <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg></div>
+      </div>
+      <div class="svc-row-item">
+        <div class="svc-row-num">02</div>
+        <div class="svc-row-title">รับสร้างบ้าน</div>
+        <div class="svc-row-desc">ก่อสร้างบ้านทุกสไตล์ วัสดุมาตรฐาน ควบคุมงานโดยวิศวกร ส่งงานตรงเวลา</div>
+        <div class="svc-row-more">ดูโครงการ <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg></div>
+      </div>
+      <div class="svc-row-item">
+        <div class="svc-row-num">03</div>
+        <div class="svc-row-title">ต่อเติม & รีโนเวท</div>
+        <div class="svc-row-desc">ต่อเติมโรงรถ ห้องครัว ห้องน้ำ ห้องสัตว์เลี้ยง หรือรีโนเวทบ้านทั้งหลัง</div>
+        <div class="svc-row-more">ดูงานต่อเติม <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-off">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">ผลงานของเรา</div>
+    <h2 class="sec-h2" style="margin-bottom:0">งานจริง รูปจริง · <em>โครงการที่ผ่านมา</em></h2>
+    <div class="port-editorial">
+      <div class="pe-card big">
+        <div class="pe-img" style="background-image:url('659970.jpg')"></div>
+        <div class="pe-info">
+          <div class="pe-tag">สร้างบ้าน</div>
+          <div class="pe-title">บ้านเดี่ยว 2 ชั้น Modern Tropical</div>
+          <div class="pe-meta">นนทบุรี · 180 ตร.ม. · 3 ห้องนอน</div>
+        </div>
+      </div>
+      <div class="pe-card">
+        <div class="pe-img" style="background-image:url('659971.jpg')"></div>
+        <div class="pe-info">
+          <div class="pe-tag">ออกแบบ</div>
+          <div class="pe-title">3D Design Tropical Modern</div>
+          <div class="pe-meta">ปทุมธานี</div>
+        </div>
+      </div>
+      <div class="pe-card">
+        <div class="pe-img" style="background-image:url('659970.jpg')"></div>
+        <div class="pe-info">
+          <div class="pe-tag">ต่อเติม</div>
+          <div class="pe-title">ต่อเติมโรงรถ + หลังคา</div>
+          <div class="pe-meta">ปทุมธานี · เสร็จ 7 วัน</div>
+        </div>
+      </div>
+      <div class="pe-card">
+        <div class="pe-img" style="background-image:url('659971.jpg')"></div>
+        <div class="pe-info">
+          <div class="pe-tag">สร้างบ้าน</div>
+          <div class="pe-title">บ้านชั้นเดียว Contemporary</div>
+          <div class="pe-meta">นนทบุรี · 120 ตร.ม.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">ทำไมต้องเรา</div>
+    <h2 class="sec-h2">ความแตกต่างที่<em>คุณจะรู้สึกได้</em></h2>
+    <div class="why-list">
+      <div class="why-row">
+        <div class="why-num">— 01</div>
+        <div class="why-title">ราคาโปร่งใส ไม่มีค่าซ่อนเร้น</div>
+        <div class="why-desc">เสนอราคาแบบแจกแจงทุกรายการ ก่อนเซ็นสัญญามีเวลาตรวจสอบ ไม่มีค่าใช้จ่ายเพิ่มกลางคัน</div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">— 02</div>
+        <div class="why-title">ทีมช่างประสบการณ์ 10+ ปี</div>
+        <div class="why-desc">ไม่ใช้แรงงานหัดใหม่กับบ้านคุณ ทีมช่างเฉพาะทาง มีวิศวกรควบคุมงานตลอดโครงการ</div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">— 03</div>
+        <div class="why-title">ส่งงานตรงเวลา มีรายงานก้าวหน้า</div>
+        <div class="why-desc">ตารางงานชัดเจน ลูกค้าติดตามได้ทุกอาทิตย์ ไม่ทิ้งงานกลางคัน</div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">— 04</div>
+        <div class="why-title">เชี่ยวชาญทุกประเภทงาน</div>
+        <div class="why-desc">ตั้งแต่บ้านหลังใหญ่จนถึงต่อเติมห้องสัตว์เลี้ยง ทีมเดียวจบ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-editorial">
+  <div class="cta-left">
+    <div class="cta-label">ติดต่อเรา</div>
+    <h2 class="cta-h2">ปรึกษาฟรี<br/>ไม่มี<em>ค่าใช้จ่าย</em></h2>
+    <p class="cta-sub">บอกเราว่าต้องการอะไร ทีมงานจะไปสำรวจหน้างานและเสนอราคาโดยละเอียดภายใน 3 วันทำการ</p>
+    <div>
+      <a href="https://line.me" target="_blank" class="btn-green-fill">ทักไลน์เลย</a>
+      <a href="tel:080000000" class="btn-white-outline">โทร 08-XXXX-XXXX</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="sec-eyebrow">ตัวเลขของเรา</div>
+    <div class="cta-stat-grid">
+      <div class="cst-item"><div class="cst-num">200<span>+</span></div><div class="cst-label">โครงการสำเร็จ</div></div>
+      <div class="cst-item"><div class="cst-num">10<span>+</span></div><div class="cst-label">ปีในวงการ</div></div>
+      <div class="cst-item"><div class="cst-num">98<span>%</span></div><div class="cst-label">ลูกค้าพอใจ</div></div>
+      <div class="cst-item"><div class="cst-num">3<span>จว.</span></div><div class="cst-label">พื้นที่บริการ</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="LOGO06.png" alt="มหาเฮงการช่าง" style="height:38px">
+  <div class="foot-links">
+    <a href="#">บริการ</a><a href="#">ผลงาน</a><a href="#">ติดต่อ</a>
+  </div>
+  <div class="foot-copy">© 2025 มหาเฮงการช่าง · สงวนลิขสิทธิ์</div>
+</footer>
+
+</body>
+</html>
