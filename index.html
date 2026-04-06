@@ -76,19 +76,19 @@ html, body {
 
 /* Navbar สีทอง */
 .glass-nav {
-  background: #d4a017 !important;
+  background: #192950 !important;
   backdrop-filter: none;
   box-shadow: 0 4px 24px rgba(10,20,60,0.45);
-  border-bottom: 1px solid rgba(13,28,58,0.18);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ลิงก์ nav บน bg สีทอง */
-.glass-nav a { color: #0d1c3a !important; }
-.glass-nav a.active-link { color: #112244 !important; border-bottom: 2px solid #112244; }
-.glass-nav a:hover { color: #112244 !important; }
+.glass-nav a { color: #ffffff !important; }
+.glass-nav a.active-link { color: #00E09F !important; border-bottom: 2px solid #00E09F; }
+.glass-nav a:hover { color: #00E09F !important; }
 
 /* ปุ่ม nav บน bg สีทอง */
-.glass-nav button { background: #112244 !important; color: #f7e8b1 !important; }
+.glass-nav button { background: #00E09F !important; color: #002365 !important; }
 
 /* สีตัวอักษร body */
 .bg-white { background-color: #112244 !important; }
@@ -101,9 +101,9 @@ html, body {
 .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 
 /* ทุกหัวข้อเป็นสีเหลือง */
-h1, h2,
-h1.text-secondary, h2.text-secondary,  h6.text-secondary,
-h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
+h2,
+h2.text-secondary,
+h2.text-white { color: #00E09F !important; }
 
 /* Gradient Text Gold */
 .text-gold-gradient {
@@ -112,6 +112,47 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+h2.text-gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: #00E09F !important;
+  color: #00E09F !important;
+}
+
+footer a {
+  color: #ffffff !important;
+}
+
+footer a:hover {
+  color: #00E09F !important;
+}
+
+#work-process h4 {
+  color: #00E09F !important;
+}
+
+#pro-services .group.rounded-3xl {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  border-width: 5px !important;
+}
+
+#pro-services .group.rounded-3xl p {
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#pro-services .group.rounded-3xl ul,
+#pro-services .group.rounded-3xl a {
+  text-align: center;
+  justify-content: center !important;
+}
+
+#pro-services .group.rounded-3xl li {
+  justify-content: center !important;
 }
 
 /* ===== GOLD GEOMETRIC DECORATIVE ELEMENTS ===== */
@@ -281,7 +322,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
 <nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_40px_rgba(25,28,30,0.06)]">
 <div class="flex justify-between items-center px-10 py-5 max-w-screen-2xl mx-auto">
   <div class="cursor-pointer">
-    <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-14 w-auto block"/>
+    <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
   </div>
   <div class="hidden md:flex gap-10 items-center">
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="about.html">เกี่ยวกับเรา</a>
@@ -293,7 +334,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
   <div class="flex items-center gap-4">
     <button class="text-sm px-6 py-2.5 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95" style="background:#fabd00;color:#1a1000;">ขอใบเสนอราคา</button>
     <div class="cursor-pointer hidden md:block">
-      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-14 w-auto block"/>
+      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
     </div>
   </div>
 </div>
@@ -341,9 +382,10 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
         <div class="w-10 h-px" style="background:#d4a017;"></div>
         <span class="font-headline font-bold text-xs tracking-[0.3em] uppercase" style="color:#d4a017;">Premium Construction Since 2009</span>
       </div>
-<h1 class="font-layiji inline-block mb-6 hero-in text-gold-gradient overflow-visible" 
+<h1 class="font-headline inline-block mb-6 hero-in overflow-visible font-black leading-[0.95]" 
     style="font-size:clamp(3.2rem, 8vw, 6.5rem); animation-delay:0.1s">
     ผู้รับเหมาที่จริงใจ<br>ตรงไป ตรงมา
+    <span class="block text-white">ผู้รับเหมาที่จริงใจ</span><span class="block" style="color:#00E09F;">ตรงไป ตรงมา</span>
 </h1>
       <p class="text-white/70 font-body text-lg md:text-xl mb-10 max-w-lg leading-relaxed hero-in" style="animation-delay:0.22s">
         ด้วยประสบการณ์มากกว่า 15 ปี &nbsp;·&nbsp; ควบคุมงานทุกขั้นตอน &nbsp;·&nbsp; ราคาโปร่งใส
@@ -445,12 +487,17 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
   document.getElementById('hero-prev').addEventListener('click', () => { goTo(cur-1); resetTimer(); });
   dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetTimer(); }));
 
+  const heroHeadline = document.querySelector('#hero h1');
+  if (heroHeadline) {
+    heroHeadline.innerHTML = '<span class="block text-white">ผู้รับเหมาที่จริงใจ</span><span class="block" style="color:#00E09F;">ตรงไป ตรงมา</span>';
+  }
+
   startTimer();
 })();
 </script>
 
 
-<section class="py-32 bg-surface relative overflow-hidden">
+<section id="pro-services" class="py-32 bg-surface relative overflow-hidden">
   <!-- Reference BG overlay (arrows) -->
   <div class="absolute inset-0 gold-bg-arrows opacity-[0.06] pointer-events-none"></div>
   <!-- Geometric gold decorations -->
@@ -471,40 +518,40 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
     <div class="flex gap-2"><span class="w-12 h-1 rounded-full" style="background:#d4a017;"></span><span class="w-4 h-1 rounded-full" style="background:rgba(212,160,23,0.3);"></span></div>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-end transition-all hover:-translate-y-2 border-[3px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.14) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.4);">
+    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-center items-center text-center transition-all hover:-translate-y-2 border-[5px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.14) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.6);">
       <div class="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity">
         <img class="w-full h-full object-cover" src="banner1.jpg" alt="Design"/>
       </div>
       <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings:'FILL' 1;color:#d4a017;">architecture</span>
       <h3 class="font-headline inline-block text-2xl font-extrabold mb-3 text-gold-gradient">งานออกแบบบ้าน</h3>
       <p class="text-on-surface-variant mb-6">ออกแบบตามฟังก์ชันการใช้งานจริง ผสมผสานสุนทรียภาพและความคงทนถาวร</p>
-      <ul class="space-y-2 mb-6">
-        <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#d4a017;">check_circle</span> 3D Visualization</li>
+      <ul class="space-y-2 mb-6 text-center">
+        <li class="flex items-center justify-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#d4a017;">check_circle</span> 3D Visualization</li>
         <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#d4a017;">check_circle</span> แบบขออนุญาตก่อสร้าง</li>
       </ul>
       <a class="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#" style="color:#d4a017;">ดูเพิ่มเติม <span class="material-symbols-outlined">arrow_right_alt</span></a>
     </div>
-    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-end transition-all hover:-translate-y-2 border-[3px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.16) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.44);">
+    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-center items-center text-center transition-all hover:-translate-y-2 border-[5px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.16) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.62);">
       <div class="absolute inset-0 opacity-25">
         <img class="w-full h-full object-cover" src="banner2.jpg" alt="Build"/>
       </div>
       <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings:'FILL' 1;color:#fabd00;">construction</span>
       <h3 class="font-headline inline-block text-2xl font-extrabold mb-3 text-gold-gradient">งานสร้างบ้าน</h3>
       <p class="text-on-surface-variant mb-6">ควบคุมงานโดยวิศวกรผู้เชี่ยวชาญ ใช้วัสดุคุณภาพสูง และรายงานความคืบหน้าทุกสัปดาห์</p>
-      <ul class="space-y-2 mb-6">
+      <ul class="space-y-2 mb-6 text-center">
         <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#fabd00;">check_circle</span> บ้านเดี่ยว · ทาวน์เฮาส์</li>
         <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#fabd00;">check_circle</span> รับประกันงานหลังส่งมอบ</li>
       </ul>
       <a class="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#" style="color:#fabd00;">ดูเพิ่มเติม <span class="material-symbols-outlined">arrow_right_alt</span></a>
     </div>
-    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-end transition-all hover:-translate-y-2 border-[3px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.14) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.4);">
+    <div class="group relative overflow-hidden rounded-3xl p-8 h-[480px] flex flex-col justify-center items-center text-center transition-all hover:-translate-y-2 border-[5px] shadow-lg hover:shadow-2xl" style="background:linear-gradient(180deg, rgba(212,160,23,0.14) 0%, rgba(17,34,68,0.9) 38%, rgba(17,34,68,0.96) 100%); border-color:rgba(212,160,23,0.6);">
       <div class="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity">
         <img class="w-full h-full object-cover" src="banner3.jpg" alt="Renovate"/>
       </div>
       <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings:'FILL' 1;color:#d4a017;">home_repair_service</span>
       <h3 class="font-headline inline-block text-2xl font-extrabold mb-3 text-gold-gradient">งานต่อเติมและรีโนเวท</h3>
       <p class="text-on-surface-variant mb-6">ขยายพื้นที่ความสุขของคุณ ไม่ว่าจะเป็นห้องสัตว์เลี้ยง หรือต่อเติมครัวหลังบ้าน</p>
-      <ul class="space-y-2 mb-6">
+      <ul class="space-y-2 mb-6 text-center">
         <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#d4a017;">check_circle</span> ห้องสัตว์เลี้ยง · Pet Room</li>
         <li class="flex items-center gap-2 text-sm font-bold text-secondary"><span class="material-symbols-outlined text-lg" style="color:#d4a017;">check_circle</span> ต่อเติมครัว · โรงรถ</li>
       </ul>
@@ -519,7 +566,7 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
 <div class="gold-divider-thick"></div>
 
 <!-- Process -->
-<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<section id="work-process" class="py-24 bg-surface-container-low relative overflow-hidden">
   <!-- Reference BG overlay (diamond) -->
   <div class="absolute inset-0 gold-bg-diamond opacity-[0.05] pointer-events-none"></div>
   <!-- Geometric gold decorations -->
@@ -569,18 +616,18 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
   <div class="gold-line" style="width:140px;bottom:30px;left:10%;"></div>
   <div class="gold-corner gold-corner-tl" style="top:15px;left:15px;"></div>
   <div class="gold-corner gold-corner-br" style="bottom:15px;right:15px;"></div>
-<div class="max-w-screen-2xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-16 relative z-10">
-  <div class="lg:w-1/2 relative">
+<div class="max-w-screen-2xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-12 xl:gap-16 relative z-10">
+  <div class="lg:w-[70%] relative">
     <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
     <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-      <img class="w-full h-auto" src="advice.jpg" alt="Team"/>
+      <img class="w-full h-[420px] md:h-[520px] lg:h-[640px] object-cover" src="advice.jpg" alt="Team"/>
     </div>
     <div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-2xl shadow-xl hidden md:block">
       <div class="font-headline text-white font-black text-4xl">15+</div>
       <div class="font-headline text-white/80 font-bold text-xs uppercase tracking-widest">ปีประสบการณ์</div>
     </div>
   </div>
-  <div class="lg:w-1/2">
+  <div class="lg:w-[30%]">
     <h2 class="font-headline inline-block text-4xl font-black mb-6 text-gold-gradient">งานจริง คนจริง ใจจริง</h2>
     <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">เราเชื่อมั่นว่าความซื่อสัตย์คือรากฐานของความสำเร็จ งานทุกชิ้นของเราสะท้อนถึงความมุ่งมั่นและตัวตนของทีมงานมหาเฮง การช่าง ที่พร้อมดูแลลูกค้าเหมือนคนในครอบครัว</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -978,13 +1025,13 @@ h1.text-white, h2.text-white,  h6.text-white { color: #fabd00 !important; }
 <div class="gold-shimmer-bar"></div>
 
 <!-- Footer -->
-<footer class="py-10 text-white relative overflow-hidden" style="background-color: #d4a017;border-top:2px solid rgba(13,28,58,0.18);">
+<footer class="py-10 text-white relative overflow-hidden" style="background-color: #192950;border-top:2px solid rgba(255,255,255,0.08);">
   <div class="gold-line" style="width:120px;top:12px;right:8%;"></div>
   <div class="gold-line" style="width:80px;bottom:12px;left:5%;"></div>
 <div class="max-w-screen-2xl mx-auto px-8">
   <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-5">
     <div class="" >
-      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-14 w-auto block"/>
+      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
     </div>
     <div class="flex flex-wrap justify-center gap-6 text-base md:text-lg">
       <a class="text-[#0d1c3a] hover:text-[#112244] transition-colors font-semibold" href="#">งานออกแบบบ้าน</a>
