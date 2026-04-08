@@ -76,7 +76,7 @@ html, body {
 
 /* Navbar สีทอง */
 .glass-nav {
-  background: #192950 !important;
+  background: #27406f !important;
   backdrop-filter: none;
   box-shadow: 0 4px 24px rgba(10,20,60,0.45);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -86,6 +86,18 @@ html, body {
 .glass-nav a { color: #ffffff !important; }
 .glass-nav a.active-link { color: #00E09F !important; border-bottom: 2px solid #00E09F; }
 .glass-nav a:hover { color: #00E09F !important; }
+
+.nav-menu a {
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.24);
+}
+
+.nav-menu a:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
 
 /* ปุ่ม nav บน bg สีทอง */
 .glass-nav button { background: #00E09F !important; color: #002365 !important; }
@@ -324,7 +336,7 @@ footer a:hover {
   <div class="cursor-pointer">
     <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
   </div>
-  <div class="hidden md:flex gap-10 items-center">
+  <div class="hidden md:flex items-center nav-menu">
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="about.html">เกี่ยวกับเรา</a>
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="service.html">บริการของเรา</a>
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="design.html">งานออกแบบบ้าน</a>
@@ -619,7 +631,7 @@ footer a:hover {
 <div class="max-w-screen-2xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-12 xl:gap-16 relative z-10">
   <div class="lg:w-[70%] relative">
     <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+    <div class="relative z-10 overflow-hidden shadow-2xl">
       <img class="w-full h-[420px] md:h-[520px] lg:h-[640px] object-cover" src="advice.jpg" alt="Team"/>
     </div>
     <div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-2xl shadow-xl hidden md:block">
@@ -815,9 +827,9 @@ footer a:hover {
       </div>
       <div id="carousel-bi" class="flex gap-4 transition-transform duration-500 ease-out">
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_1.jpg" alt="รีโนเวท-ต่อเติม 1"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_2.jpg" alt="รีโนเวท-ต่อเติม 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_3.jpg" alt="รีโนเวท-ต่อเติม 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
-        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_4.jpg" alt="รีโนเวท-ต่อเติม 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/2.jpg" alt="รีโนเวท-ต่อเติม 2"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/3.jpg" alt="รีโนเวท-ต่อเติม 3"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
+        <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/4.jpg" alt="รีโนเวท-ต่อเติม 4"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_5.jpg" alt="รีโนเวท-ต่อเติม 5"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_6.jpg" alt="รีโนเวท-ต่อเติม 6"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
         <div class="min-w-[calc(25%-12px)] group relative overflow-hidden rounded-2xl aspect-[4/3]"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="renovate/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_7.jpg" alt="รีโนเวท-ต่อเติม 7"/><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div></div>
@@ -863,9 +875,9 @@ footer a:hover {
   const petCount = petSection ? petSection.querySelector('.text-sm.text-on-surface-variant.ml-2') : null;
   const buildFirstSet = [
     'build/first set/1.jpg',
-    'build/first set/2.jpg',
+    'build/first set/ก่อสร้าง 2.jpg',
     'build/first set/3.jpg',
-    'build/first set/4.jpg'
+    'build/first set/ก่อสร้าง 4.jpg'
   ];
   const petExtraSet = [
     'pet/LINE_ALBUM_ใส่ในบริการของเรา หัวข้อ รีโนเวท-ต่อเต_260402_1.jpg',
@@ -1025,7 +1037,7 @@ footer a:hover {
 <div class="gold-shimmer-bar"></div>
 
 <!-- Footer -->
-<footer class="py-10 text-white relative overflow-hidden" style="background-color: #192950;border-top:2px solid rgba(255,255,255,0.08);">
+<footer class="py-10 text-white relative overflow-hidden" style="background-color: #27406f;border-top:2px solid rgba(255,255,255,0.08);">
   <div class="gold-line" style="width:120px;top:12px;right:8%;"></div>
   <div class="gold-line" style="width:80px;bottom:12px;left:5%;"></div>
 <div class="max-w-screen-2xl mx-auto px-8">
