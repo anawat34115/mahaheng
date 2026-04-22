@@ -42,10 +42,24 @@ tailwind.config = {
 </script>
 <style>
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-.glass-nav { background: #1a408e !important; box-shadow: 0 4px 24px rgba(10,20,60,0.45); border-bottom: 1px solid rgba(212,160,23,0.3); }
-.glass-nav a { color: rgba(200,218,255,0.85) !important; }
-.glass-nav a.active-link { color: #d4a017 !important; border-bottom: 2px solid #d4a017; }
-.glass-nav a:hover { color: #d4a017 !important; }
+.glass-nav { background: #27406f !important; backdrop-filter: none; box-shadow: 0 4px 24px rgba(10,20,60,0.45); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.glass-nav a { color: #ffffff !important; }
+.glass-nav a.active-link { color: #00E09F !important; border-bottom: 2px solid #00E09F; }
+.glass-nav a:hover { color: #00E09F !important; }
+
+.nav-menu a {
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.24);
+}
+
+.nav-menu a:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.glass-nav button { background: #00E09F !important; color: #002365 !important; }
 
 .title-accent { color: #fabd00 !important; }
 
@@ -102,19 +116,19 @@ tailwind.config = {
 <nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_40px_rgba(25,28,30,0.06)]">
 <div class="flex justify-between items-center px-10 py-5 max-w-screen-2xl mx-auto">
   <div class="cursor-pointer">
-    <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-14 w-auto block"/>
+    <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
   </div>
-  <div class="hidden md:flex gap-10 items-center">
-    <a class="font-headline font-medium text-base hover:text-primary transition-colors" href="about.html">เกี่ยวกับเรา</a>
-    <a class="font-headline font-medium text-base hover:text-primary transition-colors" href="service.html">บริการของเรา</a>
-    <a class="font-headline font-medium text-base hover:text-primary transition-colors" href="design.html">งานออกแบบบ้าน</a>
-    <a class="font-headline font-medium text-base hover:text-primary transition-colors" href="portfolio.html">ผลงาน</a>
-    <a class="font-headline font-semibold text-base active-link" href="contact.html" aria-current="page">ติดต่อเรา</a>
+  <div class="hidden md:flex items-center nav-menu">
+    <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="about.html">เกี่ยวกับเรา</a>
+    <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="service.html">บริการของเรา</a>
+    <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="design.html">งานออกแบบบ้าน</a>
+    <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="portfolio.html">ผลงาน</a>
+    <a class="font-headline font-semibold text-lg active-link" href="contact.html" aria-current="page">ติดต่อเรา</a>
   </div>
   <div class="flex items-center gap-4">
     <button onclick="document.getElementById('sec-form').scrollIntoView({behavior:'smooth'})" class="text-sm px-6 py-2.5 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95" style="background:#fabd00;color:#1a1000;">ขอใบเสนอราคา</button>
     <div class="cursor-pointer hidden md:block">
-      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-14 w-auto block"/>
+      <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
     </div>
   </div>
 </div>
