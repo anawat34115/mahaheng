@@ -119,6 +119,7 @@ footer a:hover { color: #00E09F !important; }
     <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
   </div>
   <div class="hidden md:flex items-center nav-menu">
+    <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="index.html">หน้าหลัก</a>
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="about.html">เกี่ยวกับเรา</a>
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="service.html">บริการของเรา</a>
     <a class="font-headline font-semibold text-lg active-link" href="design.html">งานออกแบบบ้าน</a>
@@ -126,7 +127,6 @@ footer a:hover { color: #00E09F !important; }
     <a class="font-headline font-semibold text-lg hover:text-primary transition-colors" href="contact.html">ติดต่อเรา</a>
   </div>
   <div class="flex items-center gap-4">
-    <button class="text-sm px-6 py-2.5 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95" style="background:#fabd00;color:#1a1000;">ขอใบเสนอราคา</button>
     <div class="cursor-pointer hidden md:block">
       <img src="LOGO06-removebg-preview.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block"/>
     </div>
@@ -137,7 +137,7 @@ footer a:hover { color: #00E09F !important; }
 <!-- Hero Banner -->
 <section class="relative pt-36 pb-14 md:pt-40 md:pb-48 overflow-hidden min-h-[50vh] md:min-h-[70vh] flex items-center" style="background: linear-gradient(135deg, #081528 0%, #0d1c3a 50%, #0a2040 100%);">
   <div class="absolute inset-0 opacity-20">
-    <img src="LINE_ALBUM_แบบบ้าน%20A_260324_1.jpg" class="w-full h-full object-cover" alt="hero"/>
+    <img src="LINE_ALBUM_3%20%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%20(%E0%B8%9B%E0%B8%81)_260324_1.jpg" class="w-full h-full object-cover" alt="hero"/>
   </div>
   <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(8,21,40,0.95) 40%, rgba(8,21,40,0.6));"></div>
   <div class="relative z-10 max-w-screen-2xl mx-auto px-5 md:px-8 w-full">
@@ -152,22 +152,6 @@ footer a:hover { color: #00E09F !important; }
         <p class="text-on-surface-variant text-base md:text-xl max-w-3xl leading-relaxed">ออกแบบตามฟังก์ชันการใช้งานจริง ผสมผสานสุนทรียภาพและความคงทนถาวร พร้อม 3D Visualization และแบบขออนุญาตก่อสร้าง</p>
       </div>
     </div>
-    <div class="flex gap-5 md:gap-8 mt-6 md:mt-8">
-      <div class="text-center">
-        <div class="font-headline font-black text-3xl text-primary">39<span class="text-xl">+</span></div>
-        <div class="text-on-surface-variant text-xs uppercase tracking-widest font-headline mt-1">ผลงานออกแบบ</div>
-      </div>
-      <div class="w-px bg-white/10"></div>
-      <div class="text-center">
-        <div class="font-headline font-black text-3xl text-primary">3D</div>
-        <div class="text-on-surface-variant text-xs uppercase tracking-widest font-headline mt-1">Visualization</div>
-      </div>
-      <div class="w-px bg-white/10"></div>
-      <div class="text-center">
-        <div class="font-headline font-black text-3xl text-primary">100<span class="text-xl">%</span></div>
-        <div class="text-on-surface-variant text-xs uppercase tracking-widest font-headline mt-1">ลูกค้าพอใจ</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -178,77 +162,21 @@ footer a:hover { color: #00E09F !important; }
   <!-- Filter Tabs -->
   <div class="flex flex-wrap gap-3 mb-12">
     <button onclick="filterGallery('all')" id="tab-all" class="filter-tab active font-headline font-bold px-6 py-2.5 rounded-full border border-primary/30 text-sm transition-all">
-      ทั้งหมด (39)
-    </button>
-    <button onclick="filterGallery('a')" id="tab-a" class="filter-tab font-headline font-bold px-6 py-2.5 rounded-full border border-primary/30 text-on-surface-variant text-sm transition-all hover:border-primary hover:text-primary">
-      แบบบ้าน A (7)
+      ทั้งหมด (32)
     </button>
     <button onclick="filterGallery('3ch')" id="tab-3ch" class="filter-tab font-headline font-bold px-6 py-2.5 rounded-full border border-primary/30 text-on-surface-variant text-sm transition-all hover:border-primary hover:text-primary">
-      บ้าน 3 ชั้น (6)
+      ออกแบบอาคารพาณิชย์ (6)
     </button>
     <button onclick="filterGallery('bi')" id="tab-bi" class="filter-tab font-headline font-bold px-6 py-2.5 rounded-full border border-primary/30 text-on-surface-variant text-sm transition-all hover:border-primary hover:text-primary">
       ออกแบบบิ้วอิน (26)
     </button>
   </div>
 
-  <!-- Section: แบบบ้าน A -->
-  <div id="section-a" class="mb-16">
-    <div class="flex items-center gap-3 mb-6">
-      <span class="w-10 h-1 bg-primary rounded-full inline-block"></span>
-      <h2 class="font-headline text-2xl font-black">แบบบ้าน A</h2>
-      <span class="text-on-surface-variant text-sm ml-1">7 รูป</span>
-    </div>
-    <div class="gallery-grid flex overflow-x-auto snap-x snap-mandatory gap-4 pb-3 md:grid md:grid-cols-3 lg:grid-cols-4">
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',0)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_1.jpg" alt="แบบบ้าน A 1"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',1)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_2.jpg" alt="แบบบ้าน A 2"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',2)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_3.jpg" alt="แบบบ้าน A 3"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',3)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_4.jpg" alt="แบบบ้าน A 4"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',4)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_5.jpg" alt="แบบบ้าน A 5"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',5)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_6.jpg" alt="แบบบ้าน A 6"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-      <div class="gallery-item snap-start shrink-0 w-[82vw] md:w-auto group relative overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-low" data-cat="a" onclick="openLightbox('a',6)">
-        <img class="w-full h-full object-cover" src="LINE_ALBUM_แบบบ้าน%20A_260324_7.jpg" alt="แบบบ้าน A 7"/>
-        <div class="absolute inset-0 bg-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Section: บ้าน 3 ชั้น -->
   <div id="section-3ch" class="mb-16">
     <div class="flex items-center gap-3 mb-6">
       <span class="w-10 h-1 bg-primary rounded-full inline-block"></span>
-      <h2 class="font-headline text-2xl font-black">บ้าน 3 ชั้น</h2>
+      <h2 class="font-headline text-2xl font-black">ออกแบบอาคารพาณิชย์</h2>
       <span class="text-on-surface-variant text-sm ml-1">6 รูป</span>
     </div>
     <div class="gallery-grid flex overflow-x-auto snap-x snap-mandatory gap-4 pb-3 md:grid md:grid-cols-3 lg:grid-cols-4">
@@ -310,7 +238,7 @@ footer a:hover { color: #00E09F !important; }
 <section class="relative overflow-hidden py-28 md:py-36" style="background:#081528;">
   <!-- bg image overlay -->
   <div class="absolute inset-0">
-    <img src="LINE_ALBUM_แบบบ้าน%20A_260324_3.jpg" class="w-full h-full object-cover opacity-10" alt=""/>
+    <img src="LINE_ALBUM_3%20%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%20(%E0%B8%9B%E0%B8%81)_260324_1.jpg" class="w-full h-full object-cover opacity-10" alt=""/>
   </div>
   <!-- gradient vignette -->
   <div class="absolute inset-0" style="background:radial-gradient(ellipse at center, rgba(0,200,150,0.08) 0%, rgba(8,21,40,0.95) 70%);"></div>
@@ -411,7 +339,6 @@ footer a:hover { color: #00E09F !important; }
 
 // Gallery data
 const galleries = {
-  a: Array.from({length:7}, (_,i) => 'LINE_ALBUM_%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%20A_260324_'+(i+1)+'.jpg'),
   '3ch': Array.from({length:6}, (_,i) => 'LINE_ALBUM_3%20%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%20(%E0%B8%9B%E0%B8%81)_260324_'+(i+1)+'.jpg'),
   bi: Array.from({length:26}, (_,i) => 'LINE_ALBUM_%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%20%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%A7%E0%B8%AD%E0%B8%B4%E0%B8%99_260324_'+(i+1)+'.jpg'),
 };
@@ -446,8 +373,8 @@ document.addEventListener('keydown', function(e){
 
 // Filter tabs
 function filterGallery(cat){
-  const sections = { a: 'section-a', '3ch': 'section-3ch', bi: 'section-bi' };
-  const tabs = { all: 'tab-all', a: 'tab-a', '3ch': 'tab-3ch', bi: 'tab-bi' };
+  const sections = { '3ch': 'section-3ch', bi: 'section-bi' };
+  const tabs = { all: 'tab-all', '3ch': 'tab-3ch', bi: 'tab-bi' };
   Object.values(tabs).forEach(t => {
     const el = document.getElementById(t);
     el.classList.remove('active');
