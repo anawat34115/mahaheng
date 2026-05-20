@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="th">
 
 <head>
@@ -19,20 +19,20 @@
         extend: {
           colors: {
             "surface-variant": "#e0e3e5", "tertiary-fixed": "#ffdf9e", "on-surface-variant": "#9dbdcc",
-            "secondary-fixed": "#003828", "on-tertiary": "#ffffff", "surface-container-high": "#1a2e58",
-            "on-primary-fixed": "#002114", "on-primary-container": "#80f0d0", "surface-container-lowest": "#081528",
+            "secondary-fixed": "#003828", "on-tertiary": "#ffffff", "surface-container-high": "rgba(43, 24, 16, 0.55)",
+            "on-primary-fixed": "#002114", "on-primary-container": "#80f0d0", "surface-container-lowest": "rgba(6, 28, 18, 0.6)",
             "on-tertiary-container": "#fabd00", "on-error-container": "#ffdad6", "on-secondary-fixed": "#003020",
-            "on-secondary-fixed-variant": "#00a87d", "tertiary-fixed-dim": "#fabd00", "surface-tint": "#00C896",
-            "error": "#ff5449", "inverse-on-surface": "#0d1c3a", "on-surface": "#ccdcf0", "surface-bright": "#1a2e58",
-            "secondary-container": "#0d1e52", "primary": "#d4a017", "surface-container": "#152650",
+            "on-secondary-fixed-variant": "#00a87d", "tertiary-fixed-dim": "#fabd00", "surface-tint": "#fabd00",
+            "error": "#ff5449", "inverse-on-surface": "transparent", "on-surface": "#ccdcf0", "surface-bright": "rgba(43, 24, 16, 0.55)",
+            "secondary-container": "rgba(43, 24, 16, 0.3)", "primary": "#d4a017", "surface-container": "rgba(43, 24, 16, 0.4)",
             "outline": "#4a6080", "primary-fixed": "#d4a017", "primary-fixed-dim": "#d4a017",
-            "on-tertiary-fixed-variant": "#fabd00", "outline-variant": "rgba(255,255,255,.1)", "surface-container-highest": "#1e3468",
+            "on-tertiary-fixed-variant": "#fabd00", "outline-variant": "rgba(255,255,255,.1)", "surface-container-highest": "rgba(43, 24, 16, 0.65)",
             "inverse-primary": "#006c4c", "on-primary-fixed-variant": "#003020", "error-container": "#5c0010",
-            "surface-container-low": "#112244", "on-tertiary-fixed": "#fabd00", "surface-dim": "#081528",
-            "on-secondary": "#001a10", "secondary-fixed-dim": "#00a87d", "surface": "#0d1c3a",
-            "inverse-surface": "#e8f0ff", "background": "#0d1c3a", "on-background": "#e8f0ff",
-            "tertiary": "#fabd00", "on-secondary-container": "#80f0d0", "primary-container": "#0f1a3e",
-            "tertiary-container": "#5c4200", "on-error": "#ffffff", "on-primary": "#1a1000", "secondary": "#1a2e6b"
+            "surface-container-low": "rgba(43, 24, 16, 0.45)", "on-tertiary-fixed": "#fabd00", "surface-dim": "rgba(6, 28, 18, 0.6)",
+            "on-secondary": "#001a10", "secondary-fixed-dim": "#00a87d", "surface": "transparent",
+            "inverse-surface": "#e8f0ff", "background": "transparent", "on-background": "#e8f0ff",
+            "tertiary": "#fabd00", "on-secondary-container": "#80f0d0", "primary-container": "rgba(43, 24, 16, 0.2)",
+            "tertiary-container": "#5c4200", "on-error": "#ffffff", "on-primary": "#1a1000", "secondary": "rgba(6, 28, 18, 0.8)"
           },
           fontFamily: {
             "headline": ["Kanit", "Prompt", "sans-serif"],
@@ -49,8 +49,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: #d4a017;
-    }
+      background: linear-gradient(135deg, #2b1810 0%, #061c12 100%) fixed !important; }
 
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -125,7 +124,7 @@
 
     /* สีตัวอักษร body */
     .bg-white {
-      background-color: #112244 !important;
+      background-color: rgba(43, 24, 16, 0.45) !important;
     }
 
     .text-slate-600 {
@@ -428,8 +427,6 @@
           href="about.html">เกี่ยวกับเรา</a>
         <a class="font-headline font-semibold text-lg hover:text-primary transition-colors"
           href="service.html">บริการของเรา</a>
-        <a class="font-headline font-semibold text-lg hover:text-primary transition-colors"
-          href="design.html">งานออกแบบบ้าน</a>
         <a class="font-headline font-semibold text-lg hover:text-primary transition-colors"
           href="portfolio.html">ผลงาน</a>
         <a class="font-headline font-semibold text-lg hover:text-primary transition-colors"
@@ -3895,11 +3892,11 @@
           <img src="Logo_02 ขาว ปรับ.png" alt="MAHAHENG Karnchang" class="h-20 w-auto block" />
         </div>
         <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="index.html">หน้าหลัก</a>
           <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="about.html">เกี่ยวกับเรา</a>
-          <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="design.html">งานออกแบบบ้าน</a>
           <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="service.html">บริการของเรา</a>
           <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="portfolio.html">ผลงาน</a>
-          <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="index.html#contact">ติดต่อเรา</a>
+          <a class="text-white/70 hover:text-[#d4a017] transition-colors" href="contact.html">ติดต่อเรา</a>
         </div>
         <div class="flex gap-5 shrink-0">
           <a class="flex items-center gap-2 text-white/70 hover:text-[#d4a017] transition-colors text-sm"
