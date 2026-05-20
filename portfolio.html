@@ -259,12 +259,14 @@ footer a:hover { color: #00E09F !important; }
 @media (min-width: 768px) {
   .scroll-dots { display: none; }
   .gallery-scroll { display: grid !important; }
-  .gallery-grid-a { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .gallery-grid-a { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .gallery-grid-3ch { grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .gallery-grid-bi { grid-template-columns: repeat(5, 1fr); gap: 12px; }
-  .gallery-item { height: 220px; }
-  .gallery-grid-bi .gallery-item { height: 180px; }
-  .gallery-grid-3ch .gallery-item { height: 240px; }
+  .gallery-grid-bi { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .gallery-item { height: 240px; }
+  
+  /* Show more toggle rules */
+  .desktop-hidden { display: none !important; }
+  .gallery-scroll.show-all .desktop-hidden { display: block !important; }
 }
 
 /* Filter tabs */
@@ -425,7 +427,7 @@ footer a:hover { color: #00E09F !important; }
       <div class="absolute inset-0 flex flex-col justify-end p-5" style="background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 60%);">
         <div class="text-primary font-headline text-xs font-bold uppercase tracking-widest mb-1" aria-hidden="true">01</div>
         <h3 class="title-accent font-headline font-black text-xl">ออกแบบบ้าน</h3>
-        <p class="text-white/70 text-xs mt-1">แบบบ้าน A, บ้าน 3 ชั้น</p>
+        <p class="text-white/70 text-xs mt-1">ออกแบบภายใน, 3D</p>
       </div>
     </a>
     <a href="#sec-build" class="group relative overflow-hidden rounded-2xl aspect-video cursor-pointer block">
@@ -436,7 +438,7 @@ footer a:hover { color: #00E09F !important; }
       <div class="absolute inset-0 flex flex-col justify-end p-5" style="background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 60%);">
         <div class="text-primary font-headline text-xs font-bold uppercase tracking-widest mb-1" aria-hidden="true">02</div>
         <h3 class="title-accent font-headline font-black text-xl">ก่อสร้าง</h3>
-        <p class="text-white/70 text-xs mt-1">บ้านครบวงจร</p>
+        <p class="text-white/70 text-xs mt-1">บริการครบวงจร</p>
       </div>
     </a>
     <a href="#sec-renew" class="group relative overflow-hidden rounded-2xl aspect-video cursor-pointer block">
@@ -447,7 +449,7 @@ footer a:hover { color: #00E09F !important; }
       <div class="absolute inset-0 flex flex-col justify-end p-5" style="background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 60%);">
         <div class="text-primary font-headline text-xs font-bold uppercase tracking-widest mb-1" aria-hidden="true">03</div>
         <h3 class="title-accent font-headline font-black text-xl">รีโนเวท & บิ้วอิน</h3>
-        <p class="text-white/70 text-xs mt-1">ต่อเติม ออกแบบภายใน</p>
+        <p class="text-white/70 text-xs mt-1">รีโนเวท-ต่อเติม, บิ้วอิน</p>
       </div>
     </a>
   </div>
@@ -459,13 +461,10 @@ footer a:hover { color: #00E09F !important; }
 <div class="max-w-screen-xl mx-auto px-5 md:px-8">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
     <div>
-      <div class="flex items-center gap-3 mb-2" aria-hidden="true">
-        <span class="w-8 h-1 rounded-full inline-block" style="background:#d4a017;"></span>
-        <span class="text-primary font-headline text-xs font-bold uppercase tracking-widest">แบบบ้าน A</span>
-      </div>
+
       <h2 id="design-heading" class="title-accent font-headline text-2xl md:text-3xl font-black">งานออกแบบบ้าน</h2>
     </div>
-    <span class="text-on-surface-variant text-sm font-headline" aria-label="จำนวน 7 ผลงาน">7 ผลงาน</span>
+    <span class="text-on-surface-variant text-sm font-headline" aria-label="จำนวน 6 ผลงาน">6 ผลงาน</span>
   </div>
   <!-- ✅ P1 FIX: Gallery loaded via Intersection Observer — not upfront JS dump -->
   <div class="gallery-scroll gallery-grid-a" id="gallery-a" data-gallery="a" aria-label="แกลเลอรีผลงานออกแบบบ้าน">
@@ -476,6 +475,11 @@ footer a:hover { color: #00E09F !important; }
     <div class="skel-item" aria-hidden="true"></div>
   </div>
   <div class="scroll-dots" id="dots-a" aria-hidden="true"></div>
+  <div id="more-a-container" class="mt-8 text-center hidden">
+    <button id="btn-more-a" class="font-headline font-bold px-8 py-3 rounded-xl transition-all hover:scale-105 active:scale-95" style="border:1.5px solid #fabd00;color:#fabd00;background:rgba(250,189,0,0.05);">
+      ดูเพิ่มเติม
+    </button>
+  </div>
 </div>
 </section>
 
@@ -484,10 +488,7 @@ footer a:hover { color: #00E09F !important; }
 <div class="max-w-screen-xl mx-auto px-5 md:px-8">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
     <div>
-      <div class="flex items-center gap-3 mb-2" aria-hidden="true">
-        <span class="w-8 h-1 rounded-full inline-block" style="background:#d4a017;"></span>
-        <span class="text-primary font-headline text-xs font-bold uppercase tracking-widest">บ้าน 3 ชั้น</span>
-      </div>
+
       <h2 id="build-heading" class="title-accent font-headline text-2xl md:text-3xl font-black">งานก่อสร้าง</h2>
     </div>
     <span class="text-on-surface-variant text-sm font-headline" aria-label="จำนวน 6 ผลงาน">6 ผลงาน</span>
@@ -498,6 +499,11 @@ footer a:hover { color: #00E09F !important; }
     <div class="skel-item" aria-hidden="true"></div>
   </div>
   <div class="scroll-dots" id="dots-3ch" aria-hidden="true"></div>
+  <div id="more-3ch-container" class="mt-8 text-center hidden">
+    <button id="btn-more-3ch" class="font-headline font-bold px-8 py-3 rounded-xl transition-all hover:scale-105 active:scale-95" style="border:1.5px solid #fabd00;color:#fabd00;background:rgba(250,189,0,0.05);">
+      ดูเพิ่มเติม
+    </button>
+  </div>
 
 <!-- Injected Carousels -->
 <div class="mt-12">
@@ -2826,6 +2832,11 @@ footer a:hover { color: #00E09F !important; }
     <div class="skel-item" aria-hidden="true"></div>
   </div>
   <div class="scroll-dots" id="dots-bi" aria-hidden="true"></div>
+  <div id="more-bi-container" class="mt-8 text-center hidden">
+    <button id="btn-more-bi" class="font-headline font-bold px-8 py-3 rounded-xl transition-all hover:scale-105 active:scale-95" style="border:1.5px solid #fabd00;color:#fabd00;background:rgba(250,189,0,0.05);">
+      ดูเพิ่มเติม
+    </button>
+  </div>
 </div>
 </section>
 
@@ -3040,11 +3051,12 @@ footer a:hover { color: #00E09F !important; }
 // ============================================================
 const galleries = {
   a: [
-    { src: 'LINE_ALBUM_แบบบ้าน A_260324_1.jpg', alt: 'ผลงานออกแบบบ้าน 2 ชั้น สไตล์โมเดิร์น หมู่บ้านปทุมธานี โดย MAHAHENG' },
     { src: 'LINE_ALBUM_แบบบ้าน A_260324_2.jpg', alt: 'แบบบ้าน A มุมมองด้านหน้า งานออกแบบ 3D โดย MAHAHENG Karnchang' },
     { src: 'LINE_ALBUM_แบบบ้าน A_260324_3.jpg', alt: 'แบบบ้าน A มุมมองด้านข้าง ผลงานก่อสร้างบ้านสไตล์โมเดิร์น' },
-    { src: 'LINE_ALBUM_แบบบ้าน A_260324_4.jpg', alt: 'รายละเอียดผนังและหน้าต่างบ้านสไตล์โมเดิร์น งาน MAHAHENG' },
-  
+    { src: 'design_dummy_1.png', alt: 'แบบบ้านสไตล์โมเดิร์นทรอปิคอล งานออกแบบ 3D โดย MAHAHENG' },
+    { src: 'design_dummy_2.png', alt: 'แบบบ้านสไตล์โมเดิร์นลักชัวรี มุมมองยามเย็น โดย MAHAHENG' },
+    { src: 'design_dummy_3.png', alt: 'แบบบ้านสไตล์มินิมอลญี่ปุ่น (Muji Style) งานออกแบบ 3D' },
+    { src: 'design_dummy_4.png', alt: 'แบบบ้านสไตล์โมเดิร์นคลาสสิก งานออกแบบ 3D โดย MAHAHENG' },
   ],
   '3ch': [
     { src: 'LINE_ALBUM_3 ชั้น (ปก)_260324_1.jpg', alt: 'ผลงานก่อสร้างบ้าน 3 ชั้น ครบวงจร ปทุมธานี โดย MAHAHENG Karnchang' },
@@ -3079,6 +3091,9 @@ function buildGallery(el) {
   items.forEach((item, idx) => {
     const div = document.createElement('div');
     div.className = 'gallery-item';
+    if (idx >= 6) {
+      div.classList.add('desktop-hidden');
+    }
     div.setAttribute('role', 'listitem');
     div.setAttribute('tabindex', '0');
     div.setAttribute('aria-label', `เปิดดูรูป: ${item.alt}`);
@@ -3104,6 +3119,28 @@ function buildGallery(el) {
 
   // ✅ P2 FIX: Build scroll indicator dots (mobile only)
   buildDots(catKey, items.length, el);
+
+  if (items.length > 6) {
+    const moreContainer = document.getElementById(`more-${catKey}-container`);
+    if (moreContainer) {
+      moreContainer.classList.remove('hidden');
+      moreContainer.classList.add('md:block');
+      const btn = document.getElementById(`btn-more-${catKey}`);
+      if (btn) {
+        btn.onclick = () => {
+          if (el.classList.contains('show-all')) {
+            el.classList.remove('show-all');
+            btn.textContent = 'ดูเพิ่มเติม';
+            const section = el.closest('section');
+            if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            el.classList.add('show-all');
+            btn.textContent = 'แสดงน้อยลง';
+          }
+        };
+      }
+    }
+  }
 }
 
 function buildDots(catKey, count, galleryEl) {
